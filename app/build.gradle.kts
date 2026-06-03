@@ -15,7 +15,7 @@ android {
         versionName = "1.0.0"
 
         // Default URL - will be used if no config is found
-        buildConfigField("String", "DEFAULT_URL", "\"https://save-magnificent-configuring-finest.trycloudflare.com\"")
+        buildConfigField("String", "DEFAULT_URL", "\"https://a24703a75ae150.lhr.life\"")
     }
 
     buildTypes {

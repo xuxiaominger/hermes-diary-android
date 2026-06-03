@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     companion object {
         private const val PREFS_NAME = "hermes_diary_prefs"
         private const val KEY_SITE_URL = "site_url"
-        private const val DEFAULT_URL = "https://save-magnificent-configuring-finest.trycloudflare.com"
+        private const val DEFAULT_URL = "https://a24703a75ae150.lhr.life"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
