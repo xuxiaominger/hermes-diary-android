@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F172A"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- 标题输入 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="标题"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextColor="#94A3B8"
+            app:boxStrokeColor="#7C3AED"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="#1E293B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F1F5F9"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:inputType="text"
+                android:maxLines="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 正文输入 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="正文"
+            android:layout_marginTop="12dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:hintTextColor="#94A3B8"
+            app:boxStrokeColor="#7C3AED"
+            app:boxStrokeWidth="1dp"
+            app:boxBackgroundColor="#1E293B">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editContent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="#F1F5F9"
+                android:textSize="16sp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:minLines="10" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 保存按钮 -->
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="保存"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:backgroundTint="#7C3AED"
+            android:layout_marginTop="16dp" />
+
+        <!-- 删除按钮（编辑模式） -->
+        <Button
+            android:id="@+id/btnDelete"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="删除"
+            android:textColor="#EF4444"
+            android:textSize="14sp"
+            android:background="@android:color/transparent"
+            android:visibility="gone"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>

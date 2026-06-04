@@ -1,84 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:keepScreenOn="true">
+    android:orientation="vertical"
+    android:background="#0F172A">
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-        android:id="@+id/swipeRefresh"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <WebView
-                android:id="@+id/webView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-
-            <LinearLayout
-                android:id="@+id/errorView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="32dp"
-                android:visibility="gone"
-                android:background="#0F172A">
-
-                <ImageView
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:src="@drawable/ic_error"
-                    android:alpha="0.6" />
-
-                <TextView
-                    android:id="@+id/errorText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="#94A3B8"
-                    android:textSize="16sp"
-                    android:gravity="center"
-                    android:lineSpacingExtra="4dp"
-                    android:layout_marginTop="24dp" />
-
-                <Button
-                    android:id="@+id/retryButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:text="重试"
-                    android:textColor="#FFFFFF"
-                    android:backgroundTint="#7C3AED"
-                    android:layout_marginTop="24dp"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp" />
-
-                <Button
-                    android:id="@+id/settingsButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="48dp"
-                    android:text="设置网址"
-                    android:textColor="#94A3B8"
-                    android:background="@android:color/transparent"
-                    android:layout_marginTop="8dp"
-                    android:paddingStart="32dp"
-                    android:paddingEnd="32dp" />
-
-            </LinearLayout>
-        </FrameLayout>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
-    <com.google.android.material.progressindicator.LinearProgressIndicator
-        android:id="@+id/progressBar"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
         android:layout_width="match_parent"
-        android:layout_height="4dp"
-        android:visibility="gone"
-        app:indicatorColor="@color/primary"
-        app:trackColor="@color/transparent"
-        android:layout_gravity="top" />
+        android:layout_height="wrap_content"
+        android:background="#1E293B"
+        app:itemIconTint="@color/bottom_nav_color"
+        app:itemTextColor="@color/bottom_nav_color"
+        app:menu="@menu/bottom_nav_menu" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</LinearLayout>

@@ -2,8 +2,9 @@
 <resources>
     <string name="app_name">Hermes Diary</string>
     <string name="loading">加载中...</string>
-    <string name="no_network">网络不可用，请检查连接后重试</string>
-    <string name="settings_url_label">网站地址</string>
-    <string name="settings_save">保存</string>
-    <string name="url_hint">输入网站地址</string>
+    <string name="nav_diary">日记</string>
+    <string name="nav_albums">图册</string>
+    <string name="nav_videos">视频</string>
+    <string name="nav_podcast">播客</string>
+    <string name="nav_settings">设置</string>
 </resources>

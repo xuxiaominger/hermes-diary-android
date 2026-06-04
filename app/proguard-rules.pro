@@ -1,7 +1,7 @@
-# Add project specific ProGuard rules here.
+# Default ProGuard rules
 -keepattributes *Annotation*
--keepattributes JavascriptInterface
 -keepclassmembers class * {
     @android.webkit.JavascriptInterface <methods>;
 }
+-keep class com.hermesdiary.app.data.** { *; }
 -dontwarn com.hermesdiary.app.**
